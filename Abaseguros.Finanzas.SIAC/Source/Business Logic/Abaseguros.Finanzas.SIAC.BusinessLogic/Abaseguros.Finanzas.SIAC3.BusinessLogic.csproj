@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{97D604E5-C74D-4C72-B201-9B98595A4894}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Abaseguros.Finanzas.SIAC.BusinessLogic</RootNamespace>
+    <AssemblyName>Abaseguros.Finanzas.SIAC.BusinessLogic.BusinessLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GeneratedCode\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessUnitBL.cs" />
+    <Compile Include="MonedaBL.cs" />
+    <Compile Include="TipoCambioBL.cs" />
+    <Compile Include="PeriodoBL.cs" />
+    <Compile Include="MonitoreoPCWBL.cs" />
+    <Compile Include="MonitoreoPSBL.cs" />
+    <Compile Include="ParametroBL.cs" />
+    <Compile Include="PlazaBL.cs" />
+    <Compile Include="PosValidacionBL.cs" />
+    <Compile Include="PreValidacionBL.cs" />
+    <Compile Include="ReportesOperativosBL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValidacionSiacBL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Resource Access\Abaseguros.Finanzas.SIAC.DataAccess\Abaseguros.Finanzas.SIAC3.DataAccess.csproj">
+      <Project>{474995E2-5DD6-4832-A30D-4122796DE487}</Project>
+      <Name>Abaseguros.Finanzas.SIAC3.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Abaseguros.Finanzas.SIAC.BusinessEntities\Abaseguros.Finanzas.SIAC3.BusinessEntities.csproj">
+      <Project>{D1F262FE-A246-403E-98DF-F1D2FCE2A939}</Project>
+      <Name>Abaseguros.Finanzas.SIAC3.BusinessEntities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Abaseguros.Finanzas.SIAC.BusinessLogic.BusinessLogic.dll" />
+    <Content Include="bin\Debug\Abaseguros.Finanzas.SIAC.BusinessLogic.BusinessLogic.pdb" />
+    <Content Include="bin\Release\Abaseguros.Finanzas.SIAC.BusinessEntities.BusinessEntities.dll" />
+    <Content Include="bin\Release\Abaseguros.Finanzas.SIAC.BusinessEntities.BusinessEntities.pdb" />
+    <Content Include="bin\Release\Abaseguros.Finanzas.SIAC.BusinessLogic.BusinessLogic.dll" />
+    <Content Include="bin\Release\Abaseguros.Finanzas.SIAC.BusinessLogic.BusinessLogic.pdb" />
+    <Content Include="bin\Release\Abaseguros.Finanzas.SIAC.DataAccess.DataAccess.dll" />
+    <Content Include="bin\Release\Abaseguros.Finanzas.SIAC.DataAccess.DataAccess.pdb" />
+    <Content Include="obj\Debug\Abaseguros.Finanzas.SIAC.BusinessLogic.BusinessLogic.dll" />
+    <Content Include="obj\Debug\Abaseguros.Finanzas.SIAC.BusinessLogic.BusinessLogic.pdb" />
+    <Content Include="obj\Debug\Abaseguros.Finanzas.SIAC.BusinessLogic.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Abaseguros.Finanzas.SIAC3.BusinessLogic.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\Abaseguros.Finanzas.SIAC.BusinessLogic.BusinessLogic.dll" />
+    <Content Include="obj\Release\Abaseguros.Finanzas.SIAC.BusinessLogic.BusinessLogic.pdb" />
+    <Content Include="obj\Release\Abaseguros.Finanzas.SIAC.BusinessLogic.csproj.FileListAbsolute.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\Abaseguros.Finanzas.SIAC.BusinessLogic.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\Abaseguros.Finanzas.SIAC3.BusinessLogic.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Release\Abaseguros.Finanzas.SIAC.BusinessLogic.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Roles="BusinessLogicRole" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

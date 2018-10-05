@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{474995E2-5DD6-4832-A30D-4122796DE487}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Abaseguros.Finanzas.SIAC.DataAccess</RootNamespace>
+    <AssemblyName>Abaseguros.Finanzas.SIAC.DataAccess.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GeneratedCode\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessUnitDA.cs" />
+    <Compile Include="MonedaDA.cs" />
+    <Compile Include="SIACModelo.cs">
+      <DependentUpon>SIACModelo.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="TipoCambioDA.cs" />
+    <Compile Include="PeriodoDA.cs" />
+    <Compile Include="MonitoreoPCWDA.cs" />
+    <Compile Include="MonitoreoPSDA.cs" />
+    <Compile Include="ParametroDA.cs" />
+    <Compile Include="PlazaDA.cs" />
+    <Compile Include="PosValidacionDA.cs" />
+    <Compile Include="PreValidacionDA.cs" />
+    <Compile Include="ReportesOperativosDA.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SIACModelo.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIACModelo.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="ValidacionSiacDA.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="bin\Release\Abaseguros.Finanzas.SIAC.DataAccess.DataAccess.dll.config" />
+    <None Include="obj\Debug\Abaseguros.Finanzas.SIAC.DataAccess.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\Abaseguros.Finanzas.SIAC3.DataAccess.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Release\Abaseguros.Finanzas.SIAC.DataAccess.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SIACModelo.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>SIACModelo.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Business Logic\Abaseguros.Finanzas.SIAC.BusinessEntities\Abaseguros.Finanzas.SIAC3.BusinessEntities.csproj">
+      <Project>{D1F262FE-A246-403E-98DF-F1D2FCE2A939}</Project>
+      <Name>Abaseguros.Finanzas.SIAC.BusinessEntities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SIACModelo.dbml.layout">
+      <DependentUpon>SIACModelo.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Abaseguros.Finanzas.SIAC.DataAccess.DataAccess.dll" />
+    <Content Include="bin\Debug\Abaseguros.Finanzas.SIAC.DataAccess.DataAccess.pdb" />
+    <Content Include="bin\Release\Abaseguros.Finanzas.SIAC.BusinessEntities.BusinessEntities.dll" />
+    <Content Include="bin\Release\Abaseguros.Finanzas.SIAC.BusinessEntities.BusinessEntities.pdb" />
+    <Content Include="bin\Release\Abaseguros.Finanzas.SIAC.DataAccess.DataAccess.dll" />
+    <Content Include="bin\Release\Abaseguros.Finanzas.SIAC.DataAccess.DataAccess.pdb" />
+    <Content Include="obj\Debug\Abaseguros.Finanzas.SIAC.DataAccess.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Abaseguros.Finanzas.SIAC.DataAccess.DataAccess.dll" />
+    <Content Include="obj\Debug\Abaseguros.Finanzas.SIAC.DataAccess.DataAccess.pdb" />
+    <Content Include="obj\Debug\Abaseguros.Finanzas.SIAC3.DataAccess.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\TempPE\IcosapModelo.designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\SIACModelo.designer.cs.dll" />
+    <Content Include="obj\Release\Abaseguros.Finanzas.SIAC.DataAccess.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\Abaseguros.Finanzas.SIAC.DataAccess.DataAccess.dll" />
+    <Content Include="obj\Release\Abaseguros.Finanzas.SIAC.DataAccess.DataAccess.pdb" />
+    <Content Include="obj\Release\TempPE\IcosapModelo.designer.cs.dll" />
+    <Content Include="obj\Release\TempPE\SIACModelo.designer.cs.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,144 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Schemas", "Schemas", "{DFB55C04-EE33-45D5-BBD9-BD12B8D4FFD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIAC3Services.Model", "SIAC3Services.Model\SIAC3Services.Model.csproj", "{23B93955-282A-430B-9009-E31CF750A315}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{574A55A3-4C18-4959-9B59-8B7F45A154B5}"
+	ProjectSection(SolutionItems) = preProject
+		ProjectMapping.xml = ProjectMapping.xml
+		ProjectMapping.xsd = ProjectMapping.xsd
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Abaseguros.Finanzas.SIAC", "Abaseguros.Finanzas.SIAC", "{D8726F1F-618A-41E3-9922-4D6BBEC0E9BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{61B16CDD-C9C0-4D57-8BB6-570B904FEEDD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business Logic", "Business Logic", "{2DD88198-F415-488B-9593-B2BB89EF78E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abaseguros.Finanzas.SIAC3.BusinessEntities", "Abaseguros.Finanzas.SIAC\Source\Business Logic\Abaseguros.Finanzas.SIAC.BusinessEntities\Abaseguros.Finanzas.SIAC3.BusinessEntities.csproj", "{D1F262FE-A246-403E-98DF-F1D2FCE2A939}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abaseguros.Finanzas.SIAC3.BusinessLogic", "Abaseguros.Finanzas.SIAC\Source\Business Logic\Abaseguros.Finanzas.SIAC.BusinessLogic\Abaseguros.Finanzas.SIAC3.BusinessLogic.csproj", "{97D604E5-C74D-4C72-B201-9B98595A4894}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resource Access", "Resource Access", "{98FBB392-9A34-418D-9AC6-58B7CCE5C1F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abaseguros.Finanzas.SIAC3.DataAccess", "Abaseguros.Finanzas.SIAC\Source\Resource Access\Abaseguros.Finanzas.SIAC.DataAccess\Abaseguros.Finanzas.SIAC3.DataAccess.csproj", "{474995E2-5DD6-4832-A30D-4122796DE487}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service Interface", "Service Interface", "{29EB832F-45EE-4343-BA76-272997E2581D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abaseguros.Finanzas.SIAC3.DataContracts", "Abaseguros.Finanzas.SIAC\Source\Service Interface\Abaseguros.Finanzas.SIAC.DataContracts\Abaseguros.Finanzas.SIAC3.DataContracts.csproj", "{98256BE2-D373-4EE0-B9FB-B6995E2457FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abaseguros.Finanzas.SIAC3.FaultContracts", "Abaseguros.Finanzas.SIAC\Source\Service Interface\Abaseguros.Finanzas.SIAC.FaultContracts\Abaseguros.Finanzas.SIAC3.FaultContracts.csproj", "{BC0B8419-47D4-483D-8CC4-FA2E46446BB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abaseguros.Finanzas.SIAC3.MessageContracts", "Abaseguros.Finanzas.SIAC\Source\Service Interface\Abaseguros.Finanzas.SIAC.MessageContracts\Abaseguros.Finanzas.SIAC3.MessageContracts.csproj", "{660EBA51-B818-4295-8372-BA1BF9D37885}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abaseguros.Finanzas.SIAC3.ServiceImplementation", "Abaseguros.Finanzas.SIAC\Source\Service Interface\Abaseguros.Finanzas.SIAC.ServiceImplementation\Abaseguros.Finanzas.SIAC3.ServiceImplementation.csproj", "{E8E2C8FD-2DB2-4D19-92B1-5C34ACCCFACE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abaseguros.Finanzas.SIAC3.ServiceContracts", "Abaseguros.Finanzas.SIAC\Source\Service Interface\Abaseguros.Finanzas.SIAC.ServiceContracts\Abaseguros.Finanzas.SIAC3.ServiceContracts.csproj", "{B30DD843-CD78-4013-B1C6-CC9EAB0CBD67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A34EA8CF-464B-4386-A693-EDCD9CFFF59A}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Abaseguros.Finanzas.SIAC3.Host", "Abaseguros.Finanzas.SIAC\Tests\Abaseguros.Finanzas.SIAC3.Host\", "{1E98A0E4-C49F-43CF-9B08-0A2A6F5941A8}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{E8E2C8FD-2DB2-4D19-92B1-5C34ACCCFACE}|Abaseguros.Finanzas.SIAC.ServiceImplementation.ServiceImplementation.dll;{D1F262FE-A246-403E-98DF-F1D2FCE2A939}|Abaseguros.Finanzas.SIAC.BusinessEntities.BusinessEntities.dll;{97D604E5-C74D-4C72-B201-9B98595A4894}|Abaseguros.Finanzas.SIAC.BusinessLogic.BusinessLogic.dll;{474995E2-5DD6-4832-A30D-4122796DE487}|Abaseguros.Finanzas.SIAC.DataAccess.DataAccess.dll;{98256BE2-D373-4EE0-B9FB-B6995E2457FC}|Abaseguros.Finanzas.SIAC.DataContracts.DataContracts.dll;{BC0B8419-47D4-483D-8CC4-FA2E46446BB9}|Abaseguros.Finanzas.SIAC.FaultContracts.FaultContracts.dll;{660EBA51-B818-4295-8372-BA1BF9D37885}|Abaseguros.Finanzas.SIAC.MessageContracts.MessageContracts.dll;{B30DD843-CD78-4013-B1C6-CC9EAB0CBD67}|Abaseguros.Finanzas.SIAC.ServiceContracts.ServiceContracts.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/Abaseguros.Finanzas.SIAC3.Host"
+		Debug.AspNetCompiler.PhysicalPath = "Abaseguros.Finanzas.SIAC\Tests\Abaseguros.Finanzas.SIAC3.Host\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Abaseguros.Finanzas.SIAC3.Host\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Abaseguros.Finanzas.SIAC3.Host"
+		Release.AspNetCompiler.PhysicalPath = "Abaseguros.Finanzas.SIAC\Tests\Abaseguros.Finanzas.SIAC3.Host\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Abaseguros.Finanzas.SIAC3.Host\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51773"
+		VWDDynamicPort = "false"
+		VWDVirtualPath = "/"
+		SlnRelativePath = "Abaseguros.Finanzas.SIAC\Tests\Abaseguros.Finanzas.SIAC3.Host\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Functional Tests", "Functional Tests", "{7AC4EC9D-920A-4957-9C1B-13D3D525497F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Tests", "Unit Tests", "{753FCE7F-7906-452C-8FE9-1CDC1B8B30FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23B93955-282A-430B-9009-E31CF750A315}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23B93955-282A-430B-9009-E31CF750A315}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23B93955-282A-430B-9009-E31CF750A315}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23B93955-282A-430B-9009-E31CF750A315}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1F262FE-A246-403E-98DF-F1D2FCE2A939}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1F262FE-A246-403E-98DF-F1D2FCE2A939}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1F262FE-A246-403E-98DF-F1D2FCE2A939}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1F262FE-A246-403E-98DF-F1D2FCE2A939}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97D604E5-C74D-4C72-B201-9B98595A4894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97D604E5-C74D-4C72-B201-9B98595A4894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97D604E5-C74D-4C72-B201-9B98595A4894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97D604E5-C74D-4C72-B201-9B98595A4894}.Release|Any CPU.Build.0 = Release|Any CPU
+		{474995E2-5DD6-4832-A30D-4122796DE487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{474995E2-5DD6-4832-A30D-4122796DE487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{474995E2-5DD6-4832-A30D-4122796DE487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{474995E2-5DD6-4832-A30D-4122796DE487}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98256BE2-D373-4EE0-B9FB-B6995E2457FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98256BE2-D373-4EE0-B9FB-B6995E2457FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98256BE2-D373-4EE0-B9FB-B6995E2457FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98256BE2-D373-4EE0-B9FB-B6995E2457FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC0B8419-47D4-483D-8CC4-FA2E46446BB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC0B8419-47D4-483D-8CC4-FA2E46446BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC0B8419-47D4-483D-8CC4-FA2E46446BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC0B8419-47D4-483D-8CC4-FA2E46446BB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{660EBA51-B818-4295-8372-BA1BF9D37885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{660EBA51-B818-4295-8372-BA1BF9D37885}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{660EBA51-B818-4295-8372-BA1BF9D37885}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{660EBA51-B818-4295-8372-BA1BF9D37885}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8E2C8FD-2DB2-4D19-92B1-5C34ACCCFACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8E2C8FD-2DB2-4D19-92B1-5C34ACCCFACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8E2C8FD-2DB2-4D19-92B1-5C34ACCCFACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8E2C8FD-2DB2-4D19-92B1-5C34ACCCFACE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B30DD843-CD78-4013-B1C6-CC9EAB0CBD67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B30DD843-CD78-4013-B1C6-CC9EAB0CBD67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B30DD843-CD78-4013-B1C6-CC9EAB0CBD67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B30DD843-CD78-4013-B1C6-CC9EAB0CBD67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E98A0E4-C49F-43CF-9B08-0A2A6F5941A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E98A0E4-C49F-43CF-9B08-0A2A6F5941A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E98A0E4-C49F-43CF-9B08-0A2A6F5941A8}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E98A0E4-C49F-43CF-9B08-0A2A6F5941A8}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{61B16CDD-C9C0-4D57-8BB6-570B904FEEDD} = {D8726F1F-618A-41E3-9922-4D6BBEC0E9BE}
+		{2DD88198-F415-488B-9593-B2BB89EF78E7} = {61B16CDD-C9C0-4D57-8BB6-570B904FEEDD}
+		{D1F262FE-A246-403E-98DF-F1D2FCE2A939} = {2DD88198-F415-488B-9593-B2BB89EF78E7}
+		{97D604E5-C74D-4C72-B201-9B98595A4894} = {2DD88198-F415-488B-9593-B2BB89EF78E7}
+		{98FBB392-9A34-418D-9AC6-58B7CCE5C1F0} = {61B16CDD-C9C0-4D57-8BB6-570B904FEEDD}
+		{474995E2-5DD6-4832-A30D-4122796DE487} = {98FBB392-9A34-418D-9AC6-58B7CCE5C1F0}
+		{29EB832F-45EE-4343-BA76-272997E2581D} = {61B16CDD-C9C0-4D57-8BB6-570B904FEEDD}
+		{98256BE2-D373-4EE0-B9FB-B6995E2457FC} = {29EB832F-45EE-4343-BA76-272997E2581D}
+		{BC0B8419-47D4-483D-8CC4-FA2E46446BB9} = {29EB832F-45EE-4343-BA76-272997E2581D}
+		{660EBA51-B818-4295-8372-BA1BF9D37885} = {29EB832F-45EE-4343-BA76-272997E2581D}
+		{E8E2C8FD-2DB2-4D19-92B1-5C34ACCCFACE} = {29EB832F-45EE-4343-BA76-272997E2581D}
+		{B30DD843-CD78-4013-B1C6-CC9EAB0CBD67} = {29EB832F-45EE-4343-BA76-272997E2581D}
+		{A34EA8CF-464B-4386-A693-EDCD9CFFF59A} = {D8726F1F-618A-41E3-9922-4D6BBEC0E9BE}
+		{1E98A0E4-C49F-43CF-9B08-0A2A6F5941A8} = {A34EA8CF-464B-4386-A693-EDCD9CFFF59A}
+		{7AC4EC9D-920A-4957-9C1B-13D3D525497F} = {A34EA8CF-464B-4386-A693-EDCD9CFFF59A}
+		{753FCE7F-7906-452C-8FE9-1CDC1B8B30FF} = {A34EA8CF-464B-4386-A693-EDCD9CFFF59A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F125A2F-5853-4E23-81A0-143CC8FE3172}
+	EndGlobalSection
+EndGlobal

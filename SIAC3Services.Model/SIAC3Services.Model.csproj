@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{23B93955-282A-430B-9009-E31CF750A315}</ProjectGuid>
+    <RootNamespace>SIACServices.Model</RootNamespace>
+    <AssemblyName>SIACServices.Model.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SIAC3Dsl.datacontract" />
+    <None Include="SIAC3Dsl.datacontract.diagram">
+      <DependentUpon>SIAC3Dsl.datacontract</DependentUpon>
+    </None>
+    <None Include="SIAC3Dsl.servicecontract">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SIAC3Dsl.servicecontract.diagram">
+      <DependentUpon>SIAC3Dsl.servicecontract</DependentUpon>
+    </None>
+    <None Include="SIAC3Host.host">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SIAC3Host.host.diagram">
+      <DependentUpon>SIAC3Host.host</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Abaseguros.Finanzas.SIAC\Source\Service Interface\Abaseguros.Finanzas.SIAC.ServiceImplementation\Abaseguros.Finanzas.SIAC3.ServiceImplementation.csproj">
+      <Project>{E8E2C8FD-2DB2-4D19-92B1-5C34ACCCFACE}</Project>
+      <Name>Abaseguros.Finanzas.SIAC3.ServiceImplementation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E8E2C8FD-2DB2-4D19-92B1-5C34ACCCFACE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Abaseguros.Finanzas.SIAC.ServiceImplementation</RootNamespace>
+    <AssemblyName>Abaseguros.Finanzas.SIAC.ServiceImplementation.ServiceImplementation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GeneratedCode\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessUnitService.cs" />
+    <Compile Include="CatalogosGeneralesService.cs" />
+    <Compile Include="TipoCambioService.cs" />
+    <Compile Include="PeriodoService.cs" />
+    <Compile Include="ValidacionesSiacService.cs" />
+    <Compile Include="MonitoreoPCWService.cs" />
+    <Compile Include="MonitoreoPSService.cs" />
+    <Compile Include="PosValidacionService.cs" />
+    <Compile Include="PreValidacionService.cs" />
+    <Compile Include="ReportesOperativosService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Business Logic\Abaseguros.Finanzas.SIAC.BusinessEntities\Abaseguros.Finanzas.SIAC3.BusinessEntities.csproj">
+      <Project>{D1F262FE-A246-403E-98DF-F1D2FCE2A939}</Project>
+      <Name>Abaseguros.Finanzas.SIAC3.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business Logic\Abaseguros.Finanzas.SIAC.BusinessLogic\Abaseguros.Finanzas.SIAC3.BusinessLogic.csproj">
+      <Project>{97D604E5-C74D-4C72-B201-9B98595A4894}</Project>
+      <Name>Abaseguros.Finanzas.SIAC3.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Abaseguros.Finanzas.SIAC.DataContracts\Abaseguros.Finanzas.SIAC3.DataContracts.csproj">
+      <Project>{98256BE2-D373-4EE0-B9FB-B6995E2457FC}</Project>
+      <Name>Abaseguros.Finanzas.SIAC3.DataContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Abaseguros.Finanzas.SIAC.FaultContracts\Abaseguros.Finanzas.SIAC3.FaultContracts.csproj">
+      <Project>{BC0B8419-47D4-483D-8CC4-FA2E46446BB9}</Project>
+      <Name>Abaseguros.Finanzas.SIAC3.FaultContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Abaseguros.Finanzas.SIAC.MessageContracts\Abaseguros.Finanzas.SIAC3.MessageContracts.csproj">
+      <Project>{660EBA51-B818-4295-8372-BA1BF9D37885}</Project>
+      <Name>Abaseguros.Finanzas.SIAC3.MessageContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Abaseguros.Finanzas.SIAC.ServiceContracts\Abaseguros.Finanzas.SIAC3.ServiceContracts.csproj">
+      <Project>{B30DD843-CD78-4013-B1C6-CC9EAB0CBD67}</Project>
+      <Name>Abaseguros.Finanzas.SIAC3.ServiceContracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Roles="ServiceRole" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

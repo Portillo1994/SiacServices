@@ -1,0 +1,630 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SIAC" Class="SIACModeloDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=172.25.104.80,54707;Initial Catalog=SIAC;Persist Security Info=True;User ID=usr_sapiens" SettingsObjectName="Abaseguros.Finanzas.SIAC.DataAccess.Properties.Settings" SettingsPropertyName="SIACConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="SiacPS.spSelHistorialCargaRO" Method="spSelHistorialCargaRO">
+    <Parameter Name="FechaValidacion" Parameter="fechaValidacion" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="spSelHistorialCargaROResult">
+      <Column Name="idRutasArchivos" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TipoArchivo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Plaza" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Sistema" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Usuario" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="FechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Estatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spInsertaParametroReportes" Method="spInsertaParametroReportes">
+    <Parameter Name="idRutaArchivos" Type="System.String" DbType="VarChar(1000)" />
+    <Parameter Name="BusinessUnit" Parameter="businessUnit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idSistema" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idPlaza" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FechaValidacion" Parameter="fechaValidacion" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Login" Parameter="login" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="idSesion" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="SiacPS.spPrcPrevalidacion" Method="spPrcPrevalidacion">
+    <Parameter Name="BusinessUnit" Parameter="businessUnit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idSistema" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idPlaza" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FechaValidacion" Parameter="fechaValidacion" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Login" Parameter="login" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="CargaRO" Parameter="cargaRO" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Error" Parameter="error" Type="System.String" DbType="VarChar(500)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="SiacPS.spSelBitacoraHistorial" Method="spSelBitacoraHistorial">
+    <Parameter Name="idTipoValidacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="BusinessUnit" Parameter="businessUnit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idSistema" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idPlaza" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FechaValidacion" Parameter="fechaValidacion" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="spSelBitacoraHistorialResult">
+      <Column Name="idMensaje" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="idValidacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Mensaje" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spSelBitacora" Method="spSelBitacora">
+    <Parameter Name="idTipoValidacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="BusinessUnit" Parameter="businessUnit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idSistema" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idPlaza" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FechaValidacion" Parameter="fechaValidacion" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="spSelBitacoraResult">
+      <Column Name="idMensaje" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Mensaje" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spSelReporteMonitoreoPCW" Method="spSelReporteMonitoreoPCW">
+    <Parameter Name="idArchivo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Dia" Parameter="dia" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spSelReporteMonitoreoPCWResult">
+      <Column Name="Compania" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="Archivo" Type="System.String" DbType="VarChar(34) NOT NULL" CanBeNull="false" />
+      <Column Name="ProcesoId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VoucherABA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaContable" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Sistema" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Plaza" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spSelReporteCalendarioPCW" Method="spSelReporteCalendarioPCW">
+    <Parameter Name="idArchivo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Dia" Parameter="dia" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spSelReporteCalendarioPCWResult">
+      <Column Name="Compania" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="Archivo" Type="System.String" DbType="VarChar(34) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaInicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaFin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Semana" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeriodoId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spSelHistorialPreValidacion" Method="spSelHistorialPreValidacion">
+    <Parameter Name="BusinessUnit" Parameter="businessUnit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idSistema" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idPlaza" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FechaValidacion" Parameter="fechaValidacion" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="spSelHistorialPreValidacionResult">
+      <Column Name="ValidacionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RegistroId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaContable" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CuentaAlterna" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Moneda" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
+      <Column Name="MontoContabilidad" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="MontoSistema" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Diferencia" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Tolerancia" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="Comentarios" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spUpdResultadosPrevalidacion" Method="spUpdResultadosPrevalidacion">
+    <Parameter Name="ValidacionId" Parameter="validacionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FechaContable" Parameter="fechaContable" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="CuentaAlterna" Parameter="cuentaAlterna" Type="System.String" DbType="VarChar(9)" />
+    <Parameter Name="Moneda" Parameter="moneda" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="Estado" Parameter="estado" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="Comentarios" Parameter="comentarios" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="Error" Parameter="error" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="SiacPS.spSelDashboardPreValidacion" Method="spSelDashboardPreValidacion">
+    <Parameter Name="BusinessUnit" Parameter="businessUnit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idSistema" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idPlaza" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idPeriodo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spSelDashboardPreValidacionResult">
+      <Column Name="ValidacionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RegistroId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BusinessUnit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idPlaza" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idSistema" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SistemaPlaza" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Cuenta" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Moneda" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="D1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D3" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D4" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D5" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D6" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D7" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D8" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D9" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D10" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D11" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D12" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D13" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D14" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D15" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D16" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D17" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D18" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D19" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D20" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D21" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D22" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D23" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D24" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D25" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D26" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D27" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D28" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D29" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D30" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D31" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spSelPlaza" Method="spSelPlaza">
+    <Parameter Name="idPlaza" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spSelPlazaResult">
+      <Column Name="idPlaza" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spSelDashboardMonitoreoPS" Method="spSelDashboardMonitoreoPS">
+    <Parameter Name="BusinessUnit" Parameter="businessUnit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idSistema" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idPeriodo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Estatus" Parameter="estatus" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spSelDashboardMonitoreoPSResult">
+      <Column Name="ProcesoId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PlazaId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SistemaId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BusinessUnit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Aplicacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="D1" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D2" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D3" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D4" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D5" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D6" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D7" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D8" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D9" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D10" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D11" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D12" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D13" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D14" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D15" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D16" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D17" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D18" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D19" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D20" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D21" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D22" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D23" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D24" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D25" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D26" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D27" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D28" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D29" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D30" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D31" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spSelDashboardMonitoreoPCW" Method="spSelDashboardMonitoreoPCW">
+    <Parameter Name="BusinessUnit" Parameter="businessUnit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idArchivoPCW" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idPeriodo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Estatus" Parameter="estatus" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spSelDashboardMonitoreoPCWResult">
+      <Column Name="RelacionProcesoPCWId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ArchivoPCWId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ArchivoPCW" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BusinessUnit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="D1" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D2" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D3" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D4" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D5" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D6" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D7" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D8" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D9" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D10" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D11" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D12" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D13" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D14" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D15" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D16" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D17" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D18" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D19" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D20" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D21" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D22" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D23" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D24" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D25" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D26" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D27" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D28" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D29" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D30" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="D31" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spObtieneParametro" Method="spObtieneParametro">
+    <Parameter Name="Descripcion" Parameter="descripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ParametroId" Parameter="parametroId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spObtieneParametroResult">
+      <Column Name="idParametro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="vcValor" Type="System.String" DbType="VarChar(2550)" CanBeNull="true" />
+      <Column Name="iValor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mValor" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="dValor" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spSelResultadosPrevalidacion" Method="spSelResultadosPrevalidacion">
+    <Parameter Name="BusinessUnit" Parameter="businessUnit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idSistema" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idPlaza" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FechaValidacion" Parameter="fechaValidacion" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="spSelResultadosPrevalidacionResult">
+      <Column Name="ValidacionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaContable" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CuentaAlterna" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Moneda" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
+      <Column Name="MontoContabilidad" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="MontoSistema" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Diferencia" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Tolerancia" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="Comentarios" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="HabilitaAplicaRevision" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spInsertaReportePosValidacion" Method="spInsertaReportePosValidacion">
+    <Parameter Name="Archivo" Parameter="archivo" Type="System.String" DbType="VarChar(800)" />
+    <Parameter Name="BusinessUnit" Parameter="businessUnit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FechaValidacion" Parameter="fechaValidacion" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TipoArchivo" Parameter="tipoArchivo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TipoValidacion" Parameter="tipoValidacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Usuario" Parameter="usuario" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Error" Parameter="error" Type="System.String" DbType="VarChar(100)" Direction="InOut" />
+    <ElementType Name="spInsertaReportePosValidacionResult">
+      <Column Name="ReportePosValidacionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Archivo" Type="System.String" DbType="VarChar(800) NOT NULL" CanBeNull="false" />
+      <Column Name="BusinessUnit" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaValidacion" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ArchivoPosValidacionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TipoValidacion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EstaCargado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Usuario" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaModificacion" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaTerminaCarga" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Estatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NumeroRegistros" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spObtieneMensajesReportePosValidacion" Method="spObtieneMensajesReportePosValidacion">
+    <Parameter Name="BusinessUnit" Parameter="businessUnit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FechaValidacion" Parameter="fechaValidacion" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TipoArchivo" Parameter="tipoArchivo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TipoValidacion" Parameter="tipoValidacion" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spObtieneMensajesReportePosValidacionResult">
+      <Column Name="ReportePosValidacionMensajesId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReportePosValidacionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaModificacion" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Estatus" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Mensaje" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="OrigenEstatus" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spSelHistorialPosValidacion" Method="spSelHistorialPosValidacion">
+    <Parameter Name="BusinessUnit" Parameter="businessUnit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idSistema" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idPlaza" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FechaValidacion" Parameter="fechaValidacion" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TipoValidacion" Parameter="tipoValidacion" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spSelHistorialPosValidacionResult">
+      <Column Name="ValidacionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RegistroId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaContable" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Cuenta" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Moneda" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
+      <Column Name="MontoContabilidad" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="MontoSistema" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Diferencia" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Tolerancia" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="Comentarios" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spPrcPosvalidacion" Method="spPrcPosvalidacion">
+    <Parameter Name="BusinessUnit" Parameter="businessUnit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idSistema" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idPlaza" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FechaValidacion" Parameter="fechaValidacion" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Login" Parameter="login" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="CargaRO" Parameter="cargaRO" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Error" Parameter="error" Type="System.String" DbType="VarChar(500)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="SiacPS.spSelPeriodos" Method="spSelPeriodos">
+    <Parameter Name="BusinessUnit" Parameter="businessUnit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Anio" Parameter="anio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spSelPeriodosResult">
+      <Column Name="BusinessUnit" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idPeriodo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idEstado" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="FechaModificacion" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UsuarioModificacion" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spUpdPeriodo" Method="spUpdPeriodo">
+    <Parameter Name="BusinessUnit" Parameter="businessUnit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Periodo" Parameter="periodo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Estado" Parameter="estado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Usuario" Parameter="usuario" Type="System.String" DbType="VarChar(200)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="SiacPS.spSelFechasAcumuladoSiniestros" Method="spSelFechasAcumuladoSiniestros">
+    <ElementType Name="spSelFechasAcumuladoSiniestrosResult">
+      <Column Name="FechaDesde" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaHasta" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spSelBitacoraCargaReporte" Method="spSelBitacoraCargaReporte">
+    <Parameter Name="BusinessUnit" Parameter="businessUnit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TipoArchivo" Parameter="tipoArchivo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TipoValidacion" Parameter="tipoValidacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Fecha" Parameter="fecha" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Usuario" Parameter="usuario" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spSelBitacoraCargaReporteResult">
+      <Column Name="idMensaje" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Mensaje" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spSelResultadosPosvalidacion" Method="spSelResultadosPosvalidacion">
+    <Parameter Name="BusinessUnit" Parameter="businessUnit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idSistema" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idPlaza" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FechaValidacion" Parameter="fechaValidacion" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TipoValidacion" Parameter="tipoValidacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ArchivoPosvalidacion" Parameter="archivoPosvalidacion" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spSelResultadosPosvalidacionResult">
+      <Column Name="ValidacionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EstadoValidacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CuentaAlterna" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CveMoneda" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="MontoStagging" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="MontoCrawley" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="MontoPS" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="MontoSistema" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DiferenciaSisSta" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DiferenciaStaCra" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DiferenciaCraPs" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DiferenciaSisPs" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Tolerancia" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Comentarios" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spUpdResultadosPosvalidacion" Method="spUpdResultadosPosvalidacion">
+    <Parameter Name="ValidacionId" Parameter="validacionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CuentaAlterna" Parameter="cuentaAlterna" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="Moneda" Parameter="moneda" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="Estado" Parameter="estado" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="Comentarios" Parameter="comentarios" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="NivelPosvalidacion" Parameter="nivelPosvalidacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Error" Parameter="error" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="SiacPS.spSelDashboardPosValidacion" Method="spSelDashboardPosValidacion">
+    <Parameter Name="BusinessUnit" Parameter="businessUnit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idSistema" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idPlaza" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idPeriodo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TipoValidacionId" Parameter="tipoValidacionId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spSelDashboardPosValidacionResult">
+      <Column Name="BusinessUnit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idPlaza" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idSistema" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SistemaPlaza" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Cuenta" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Moneda" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="D1" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D2" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D3" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D4" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D5" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D6" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D7" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D8" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D9" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D10" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D11" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D12" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D13" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D14" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D15" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D16" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D17" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D18" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D19" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D20" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D21" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D22" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D23" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D24" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D25" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D26" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D27" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D28" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D29" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D30" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="D31" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spSelReporteMonitoreoPS" Method="spSelReporteMonitoreoPS">
+    <Parameter Name="ProcesoId" Parameter="procesoId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Dia" Parameter="dia" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spSelReporteMonitoreoPSResult">
+      <Column Name="BusinessUnit" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Sistema" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ProcesoId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="JournalId" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Ledger" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="FechaContable" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Plaza" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Archivo" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spSelTipoCambio" Method="spSelTipoCambio">
+    <Parameter Name="BusinessUnit" Parameter="businessUnit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Anio" Parameter="anio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Mes" Parameter="mes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Tipo" Parameter="tipo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Moneda" Parameter="moneda" Type="System.String" DbType="VarChar(3)" />
+    <ElementType Name="spSelTipoCambioResult">
+      <Column Name="BusinessUnit" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="ExchangeRateDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ExchangeRate" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="LastModified" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spObtenerValoresInicialesRptControlEnvio" Method="spObtenerValoresInicialesRptControlEnvio">
+    <Parameter Name="LoginUsuario" Parameter="loginUsuario" Type="System.String" DbType="VarChar(100)" />
+    <ElementType Name="spObtenerValoresInicialesRptControlEnvioResult">
+      <Column Name="BusinessUnit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sistema" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Estatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FechaInicial" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaFinal" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spSelConfiguracionXSistema" Method="spSelConfiguracionXSistema">
+    <Parameter Name="BusinessUnit" Parameter="businessUnit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SistemaId" Parameter="sistemaId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PlazaId" Parameter="plazaId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Configuracion" Parameter="configuracion" Type="System.String" DbType="NChar(20)" />
+    <ElementType Name="spSelConfiguracionXSistemaResult">
+      <Column Name="Valor" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spSelBusinessUnits" Method="spSelBusinessUnits">
+    <ElementType Name="spSelBusinessUnitsResult">
+      <Column Name="BusinessUnit" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Currency" Type="System.String" DbType="NVarChar(3)" CanBeNull="false" />
+      <Column Name="BusinessUnitPS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spSelMonedas" Method="spSelMonedas">
+    <ElementType Name="spSelMonedasResult">
+      <Column Name="idMoneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="cveMoneda" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spInsMoneda" Method="spInsMoneda">
+    <Parameter Name="cveMoneda" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(30)" />
+    <ElementType Name="spInsMonedaResult">
+      <Column Name="idMoneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="cveMoneda" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spInsBusinessUnit" Method="spInsBusinessUnit">
+    <Parameter Name="BusinessUnit" Parameter="businessUnit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="Moneda" Parameter="moneda" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="BusinessUnitPS" Parameter="businessUnitPS" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spInsBusinessUnitResult">
+      <Column Name="Name" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Currency_Code" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="BusinessUnitPS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spUpdBusinessUnit" Method="spUpdBusinessUnit">
+    <Parameter Name="BusinessUnit" Parameter="businessUnit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="Moneda" Parameter="moneda" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="BusinessUnitPS" Parameter="businessUnitPS" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spUpdBusinessUnitResult">
+      <Column Name="Name" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Currency_Code" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="BusinessUnitPS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spSelSistemas" Method="spSelSistemas">
+    <ElementType Name="spSelSistemasResult">
+      <Column Name="idSistema" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spInsSistema" Method="spInsSistema">
+    <Parameter Name="SistemaId" Parameter="sistemaId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(30)" />
+    <ElementType Name="spInsSistemaResult">
+      <Column Name="idSistema" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spUpdSistema" Method="spUpdSistema">
+    <Parameter Name="SistemaId" Parameter="sistemaId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(30)" />
+    <ElementType Name="spUpdSistemaResult">
+      <Column Name="idSistema" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spUpdConfiguracionSistema" Method="spUpdConfiguracionSistema">
+    <Parameter Name="BusinessUnit" Parameter="businessUnit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SistemaId" Parameter="sistemaId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Proceso" Parameter="proceso" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="SourceId" Parameter="sourceId" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="ApplJrnlId" Parameter="applJrnlId" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="Source" Parameter="source" Type="System.String" DbType="VarChar(30)" />
+    <ElementType Name="spUpdConfiguracionSistemaResult">
+      <Column Name="BusinessUnit" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="idSistema" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idPlaza" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SourceId" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Appl_Jrnl_Id" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Source" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spSelConfiguracionSistema" Method="spSelConfiguracionSistema">
+    <Parameter Name="BusinessUnit" Parameter="businessUnit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SistemaId" Parameter="sistemaId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spSelConfiguracionSistemaResult">
+      <Column Name="BusinessUnit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SistemaId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Configuracion" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Valor" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="SiacPS.spSelSourceApplJrnl" Method="spSelSourceApplJrnl">
+    <Parameter Name="BusinessUnit" Parameter="businessUnit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SistemaId" Parameter="sistemaId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spSelSourceApplJrnlResult">
+      <Column Name="BusinessUnit" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="idSistema" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SourceId" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Appl_Jrnl_Id" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Source" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

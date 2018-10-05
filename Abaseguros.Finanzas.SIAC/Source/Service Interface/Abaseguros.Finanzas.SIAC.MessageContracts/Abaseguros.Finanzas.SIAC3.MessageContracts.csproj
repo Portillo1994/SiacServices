@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{660EBA51-B818-4295-8372-BA1BF9D37885}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Abaseguros.Finanzas.SIAC.MessageContracts</RootNamespace>
+    <AssemblyName>Abaseguros.Finanzas.SIAC.MessageContracts.MessageContracts</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Abaseguros.Finanzas.SIAC.DataContracts.DataContracts.dll" />
+    <Content Include="bin\Debug\Abaseguros.Finanzas.SIAC.DataContracts.DataContracts.pdb" />
+    <Content Include="bin\Debug\Abaseguros.Finanzas.SIAC.MessageContracts.MessageContracts.dll" />
+    <Content Include="bin\Debug\Abaseguros.Finanzas.SIAC.MessageContracts.MessageContracts.pdb" />
+    <Content Include="bin\Release\Abaseguros.Finanzas.SIAC.DataContracts.DataContracts.dll" />
+    <Content Include="bin\Release\Abaseguros.Finanzas.SIAC.DataContracts.DataContracts.pdb" />
+    <Content Include="bin\Release\Abaseguros.Finanzas.SIAC.MessageContracts.MessageContracts.dll" />
+    <Content Include="bin\Release\Abaseguros.Finanzas.SIAC.MessageContracts.MessageContracts.pdb" />
+    <Content Include="obj\Debug\Abaseguros.Finanzas.SIAC.MessageContracts.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Abaseguros.Finanzas.SIAC3.MessageContracts.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\Abaseguros.Finanzas.SIAC.MessageContracts.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\Abaseguros.Finanzas.SIAC.MessageContracts.MessageContracts.dll" />
+    <Content Include="obj\Release\Abaseguros.Finanzas.SIAC.MessageContracts.MessageContracts.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GeneratedCode\ActualizaEstadoPeriodoRequest.cs" />
+    <Compile Include="GeneratedCode\ActualizaResultadosPosvalidacionRequest.cs" />
+    <Compile Include="GeneratedCode\ActualizaResultadosPosvalidacionResponse.cs" />
+    <Compile Include="GeneratedCode\ActualizaResultadosPrevalidacionRequest.cs" />
+    <Compile Include="GeneratedCode\ActualizaResultadosPrevalidacionResponse.cs" />
+    <Compile Include="GeneratedCode\FechasAcumuladoSiniestros.cs" />
+    <Compile Include="GeneratedCode\GetJournalValidationRequest.cs" />
+    <Compile Include="GeneratedCode\GetJournalValidationResponse.cs" />
+    <Compile Include="GeneratedCode\ObtieneMonedasResponse.cs" />
+    <Compile Include="GeneratedCode\HistorialRORequest.cs" />
+    <Compile Include="GeneratedCode\HistorialROResponse.cs" />
+    <Compile Include="GeneratedCode\InsertaReportePorValidacionResponse.cs" />
+    <Compile Include="GeneratedCode\InsertarReportePosValidacionRequest.cs" />
+    <Compile Include="GeneratedCode\ObtenerReporteDeSeguimientoValoresInicialesRequest.cs" />
+    <Compile Include="GeneratedCode\ObtenerReporteDeSeguimientoValoresInicialesResponse.cs" />
+    <Compile Include="GeneratedCode\ObtieneBitacoraHistorialResponse.cs" />
+    <Compile Include="GeneratedCode\ObtieneBitacoraReporteRequest.cs" />
+    <Compile Include="GeneratedCode\ObtieneBitacoraRequest.cs" />
+    <Compile Include="GeneratedCode\ObtieneBitacoraResponse.cs" />
+    <Compile Include="GeneratedCode\ObtieneDashboardMonitoreoPCWRequest.cs" />
+    <Compile Include="GeneratedCode\ObtieneDashboardMonitoreoPCWResponse.cs" />
+    <Compile Include="GeneratedCode\ObtieneDashboardMonitoreoPSRequest.cs" />
+    <Compile Include="GeneratedCode\ObtieneDashboardMonitoreoPSResponse.cs" />
+    <Compile Include="GeneratedCode\ObtieneDashboardPosValidacionRequest.cs" />
+    <Compile Include="GeneratedCode\ObtieneDashboardPosValidacionResponse.cs" />
+    <Compile Include="GeneratedCode\ObtieneDashboardPreValidacionRequest.cs" />
+    <Compile Include="GeneratedCode\ObtieneDashboardPreValidacionResponse.cs" />
+    <Compile Include="GeneratedCode\ObtieneMensajesReportePosValidacionRequest.cs" />
+    <Compile Include="GeneratedCode\ObtieneMensajesReportePosValidacionResponse.cs" />
+    <Compile Include="GeneratedCode\ObtieneParametroVarcharRequest.cs" />
+    <Compile Include="GeneratedCode\ObtieneParametroVarcharResponse.cs" />
+    <Compile Include="GeneratedCode\ObtienePeriodosRequest.cs" />
+    <Compile Include="GeneratedCode\GetBusinessUnitsResponse.cs" />
+    <Compile Include="GeneratedCode\ObtienePeriodosResponse.cs" />
+    <Compile Include="GeneratedCode\ObtienePlazaRequest.cs" />
+    <Compile Include="GeneratedCode\ObtieneReporteCalendarioPCWRequest.cs" />
+    <Compile Include="GeneratedCode\ObtieneReporteCalendarioPCWResponse.cs" />
+    <Compile Include="GeneratedCode\ObtieneReporteMonitoreoPCWRequest.cs" />
+    <Compile Include="GeneratedCode\ObtieneReporteMonitoreoPCWResponse.cs" />
+    <Compile Include="GeneratedCode\ObtieneReporteMonitoreoPSRequest.cs" />
+    <Compile Include="GeneratedCode\ObtieneReporteMonitoreoPSResponse.cs" />
+    <Compile Include="GeneratedCode\ObtieneResultadosPreValidacionRequest.cs" />
+    <Compile Include="GeneratedCode\ObtieneResultadosPreValidacionResponse.cs" />
+    <Compile Include="GeneratedCode\ObtieneTipoCambioRequest.cs" />
+    <Compile Include="GeneratedCode\ObtieneTipoCambioResponse.cs" />
+    <Compile Include="GeneratedCode\ParametroReporteRequest.cs" />
+    <Compile Include="GeneratedCode\ParametroReporteResponse.cs" />
+    <Compile Include="GeneratedCode\PlazaResponse.cs" />
+    <Compile Include="GeneratedCode\PlazasResponse.cs" />
+    <Compile Include="GeneratedCode\ProcesaPosValidacionRequest.cs" />
+    <Compile Include="GeneratedCode\ProcesaPosValidacionResponse.cs" />
+    <Compile Include="GeneratedCode\ProcesaPreValidacionRequest.cs" />
+    <Compile Include="GeneratedCode\ProcesaPreValidacionResponse.cs" />
+    <Compile Include="GeneratedCode\ResultadoPosValidacionRequest.cs" />
+    <Compile Include="GeneratedCode\ResultadoPosValidacionResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Abaseguros.Finanzas.SIAC.DataContracts\Abaseguros.Finanzas.SIAC3.DataContracts.csproj">
+      <Project>{98256BE2-D373-4EE0-B9FB-B6995E2457FC}</Project>
+      <Name>Abaseguros.Finanzas.SIAC3.DataContracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\Abaseguros.Finanzas.SIAC.MessageContracts.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Release\Abaseguros.Finanzas.SIAC.MessageContracts.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Roles="MessageContractRole" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

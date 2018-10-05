@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{98256BE2-D373-4EE0-B9FB-B6995E2457FC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Abaseguros.Finanzas.SIAC.DataContracts</RootNamespace>
+    <AssemblyName>Abaseguros.Finanzas.SIAC.DataContracts.DataContracts</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Abaseguros.Finanzas.SIAC.DataContracts.DataContracts.dll" />
+    <Content Include="bin\Debug\Abaseguros.Finanzas.SIAC.DataContracts.DataContracts.pdb" />
+    <Content Include="bin\Release\Abaseguros.Finanzas.SIAC.DataContracts.DataContracts.dll" />
+    <Content Include="bin\Release\Abaseguros.Finanzas.SIAC.DataContracts.DataContracts.pdb" />
+    <Content Include="obj\Debug\Abaseguros.Finanzas.SIAC.DataContracts.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Abaseguros.Finanzas.SIAC3.DataContracts.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\Abaseguros.Finanzas.SIAC.DataContracts.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\Abaseguros.Finanzas.SIAC.DataContracts.DataContracts.dll" />
+    <Content Include="obj\Release\Abaseguros.Finanzas.SIAC.DataContracts.DataContracts.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GeneratedCode\ActualizaPrevalidacionParametros.cs" />
+    <Compile Include="GeneratedCode\ActualizaPrevalidacionParametrosCollection.cs" />
+    <Compile Include="GeneratedCode\GetJournalValidationCollectionDC.cs" />
+    <Compile Include="GeneratedCode\GetJournalValidationDC.cs" />
+    <Compile Include="GeneratedCode\MonedaCollectionDC.cs" />
+    <Compile Include="GeneratedCode\MonedaDC.cs" />
+    <Compile Include="GeneratedCode\DiasMesDC.cs" />
+    <Compile Include="GeneratedCode\HistorialROCollectionDC.cs" />
+    <Compile Include="GeneratedCode\HistorialRODC.cs" />
+    <Compile Include="GeneratedCode\InformacionDashboardMonitoreoCollectionDC.cs" />
+    <Compile Include="GeneratedCode\InformacionDashboardMonitoreoDC.cs" />
+    <Compile Include="GeneratedCode\InformacionDashboardValidacionCollectionDC.cs" />
+    <Compile Include="GeneratedCode\InformacionDashboardValidacionDC.cs" />
+    <Compile Include="GeneratedCode\InsertaParametroReporteDC.cs" />
+    <Compile Include="GeneratedCode\ObtieneBitacoraCollectionDC.cs" />
+    <Compile Include="GeneratedCode\ObtieneBitacoraDC.cs" />
+    <Compile Include="GeneratedCode\BusinessUnitCollectionDC.cs" />
+    <Compile Include="GeneratedCode\PeriodoCollectionDC.cs" />
+    <Compile Include="GeneratedCode\BusinessUnitDC.cs" />
+    <Compile Include="GeneratedCode\PeriodoDC.cs" />
+    <Compile Include="GeneratedCode\PlazaCollectionDC.cs" />
+    <Compile Include="GeneratedCode\PlazaDC.cs" />
+    <Compile Include="GeneratedCode\ReporteCalendarioPCWCollectionDC.cs" />
+    <Compile Include="GeneratedCode\ReporteCalendarioPCWDC.cs" />
+    <Compile Include="GeneratedCode\ReporteMonitoreoPCWCollectionDC.cs" />
+    <Compile Include="GeneratedCode\ReporteMonitoreoPCWDC.cs" />
+    <Compile Include="GeneratedCode\ReporteMonitoreoPSCollectionDC.cs" />
+    <Compile Include="GeneratedCode\ReporteMonitoreoPSDC.cs" />
+    <Compile Include="GeneratedCode\ReportePosValidacionMensajesCollectionDC.cs" />
+    <Compile Include="GeneratedCode\ReportePosValidacionMensajesDC.cs" />
+    <Compile Include="GeneratedCode\Request_BU_Sistema_Plaza_FechaValDC.cs" />
+    <Compile Include="GeneratedCode\Request_BU_Sistema_Plaza_PeriodoDC.cs" />
+    <Compile Include="GeneratedCode\ResultadosPosValidacionCollectionDC.cs" />
+    <Compile Include="GeneratedCode\ResultadosPosValidacionDC.cs" />
+    <Compile Include="GeneratedCode\ResultadosPreValidacionCollectionDC.cs" />
+    <Compile Include="GeneratedCode\ResultadosPreValidacionDC.cs" />
+    <Compile Include="GeneratedCode\TipoCambioCollectionDC.cs" />
+    <Compile Include="GeneratedCode\TipoCambioDC.cs" />
+    <Compile Include="GeneratedCode\ValoresInicialesReporteSeguimiento.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Release\Abaseguros.Finanzas.SIAC.DataContracts.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Roles="DataContractRole" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

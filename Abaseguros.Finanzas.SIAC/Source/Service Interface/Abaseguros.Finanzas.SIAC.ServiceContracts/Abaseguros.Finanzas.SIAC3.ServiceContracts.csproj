@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B30DD843-CD78-4013-B1C6-CC9EAB0CBD67}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Abaseguros.Finanzas.SIAC.ServiceContracts</RootNamespace>
+    <AssemblyName>Abaseguros.Finanzas.SIAC.ServiceContracts.ServiceContracts</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Abaseguros.Finanzas.SIAC.ServiceContracts.ServiceContracts.dll" />
+    <Content Include="bin\Debug\Abaseguros.Finanzas.SIAC.ServiceContracts.ServiceContracts.pdb" />
+    <Content Include="bin\Release\Abaseguros.Finanzas.SIAC.DataContracts.DataContracts.dll" />
+    <Content Include="bin\Release\Abaseguros.Finanzas.SIAC.DataContracts.DataContracts.pdb" />
+    <Content Include="bin\Release\Abaseguros.Finanzas.SIAC.FaultContracts.FaultContracts.dll" />
+    <Content Include="bin\Release\Abaseguros.Finanzas.SIAC.FaultContracts.FaultContracts.pdb" />
+    <Content Include="bin\Release\Abaseguros.Finanzas.SIAC.MessageContracts.MessageContracts.dll" />
+    <Content Include="bin\Release\Abaseguros.Finanzas.SIAC.MessageContracts.MessageContracts.pdb" />
+    <Content Include="bin\Release\Abaseguros.Finanzas.SIAC.ServiceContracts.ServiceContracts.dll" />
+    <Content Include="bin\Release\Abaseguros.Finanzas.SIAC.ServiceContracts.ServiceContracts.pdb" />
+    <Content Include="obj\Debug\Abaseguros.Finanzas.SIAC.ServiceContracts.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Abaseguros.Finanzas.SIAC3.ServiceContracts.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\Abaseguros.Finanzas.SIAC.ServiceContracts.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\Abaseguros.Finanzas.SIAC.ServiceContracts.ServiceContracts.dll" />
+    <Content Include="obj\Release\Abaseguros.Finanzas.SIAC.ServiceContracts.ServiceContracts.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GeneratedCode\ICatalogosGeneralesServiceContract.cs" />
+    <Compile Include="GeneratedCode\IMonitoreoPCWServiceContract.cs" />
+    <Compile Include="GeneratedCode\IMonitoreoPSServiceContract.cs" />
+    <Compile Include="GeneratedCode\IBusinessUnitServiceContract.cs" />
+    <Compile Include="GeneratedCode\IPeriodoServiceContract.cs" />
+    <Compile Include="GeneratedCode\IPosValidacionServiceContract.cs" />
+    <Compile Include="GeneratedCode\IPreValidacionServiceContract.cs" />
+    <Compile Include="GeneratedCode\IReportesOperativosServiceContract.cs" />
+    <Compile Include="GeneratedCode\ITipoCambioServiceContract.cs" />
+    <Compile Include="GeneratedCode\IValidacionesSiacServiceContract.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Business Logic\Abaseguros.Finanzas.SIAC.BusinessEntities\Abaseguros.Finanzas.SIAC3.BusinessEntities.csproj">
+      <Project>{d1f262fe-a246-403e-98df-f1d2fce2a939}</Project>
+      <Name>Abaseguros.Finanzas.SIAC3.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Abaseguros.Finanzas.SIAC.DataContracts\Abaseguros.Finanzas.SIAC3.DataContracts.csproj">
+      <Project>{98256BE2-D373-4EE0-B9FB-B6995E2457FC}</Project>
+      <Name>Abaseguros.Finanzas.SIAC3.DataContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Abaseguros.Finanzas.SIAC.FaultContracts\Abaseguros.Finanzas.SIAC3.FaultContracts.csproj">
+      <Project>{BC0B8419-47D4-483D-8CC4-FA2E46446BB9}</Project>
+      <Name>Abaseguros.Finanzas.SIAC3.FaultContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Abaseguros.Finanzas.SIAC.MessageContracts\Abaseguros.Finanzas.SIAC3.MessageContracts.csproj">
+      <Project>{660EBA51-B818-4295-8372-BA1BF9D37885}</Project>
+      <Name>Abaseguros.Finanzas.SIAC3.MessageContracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\Abaseguros.Finanzas.SIAC.ServiceContracts.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\Abaseguros.Finanzas.SIAC3.ServiceContracts.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Release\Abaseguros.Finanzas.SIAC.ServiceContracts.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Roles="ServiceContractRole" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

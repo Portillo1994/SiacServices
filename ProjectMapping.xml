@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<ProjectMappingInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" FileName="ProjectMapping.xml" xmlns="http://schemas.microsoft.com/pag/project-mapping">
+  <ProjectMappingTables>
+    <ProjectMappingTable Name="Abaseguros.Finanzas.SIAC">
+      <ProjectMappings>
+        <ProjectMapping ProjectId="d1f262fe-a246-403e-98df-f1d2fce2a939" ProjectPath="\GeneratedCode" ProjectName="Abaseguros.Finanzas.SIAC3.BusinessEntities">
+          <Roles>
+            <Role Name="BusinessEntityRole" />
+          </Roles>
+        </ProjectMapping>
+        <ProjectMapping ProjectId="97d604e5-c74d-4c72-b201-9b98595a4894" ProjectPath="\GeneratedCode" ProjectName="Abaseguros.Finanzas.SIAC3.BusinessLogic">
+          <Roles>
+            <Role Name="BusinessLogicRole" />
+          </Roles>
+        </ProjectMapping>
+        <ProjectMapping ProjectId="474995e2-5dd6-4832-a30d-4122796de487" ProjectPath="\GeneratedCode" ProjectName="Abaseguros.Finanzas.SIAC3.DataAccess">
+          <Roles />
+        </ProjectMapping>
+        <ProjectMapping ProjectId="98256be2-d373-4ee0-b9fb-b6995e2457fc" ProjectPath="\GeneratedCode" ProjectName="Abaseguros.Finanzas.SIAC3.DataContracts">
+          <Roles>
+            <Role Name="DataContractRole" />
+          </Roles>
+        </ProjectMapping>
+        <ProjectMapping ProjectId="bc0b8419-47d4-483d-8cc4-fa2e46446bb9" ProjectPath="\GeneratedCode" ProjectName="Abaseguros.Finanzas.SIAC3.FaultContracts">
+          <Roles>
+            <Role Name="FaultContractRole" />
+          </Roles>
+        </ProjectMapping>
+        <ProjectMapping ProjectId="660eba51-b818-4295-8372-ba1bf9d37885" ProjectPath="\GeneratedCode" ProjectName="Abaseguros.Finanzas.SIAC3.MessageContracts">
+          <Roles>
+            <Role Name="MessageContractRole" />
+          </Roles>
+        </ProjectMapping>
+        <ProjectMapping ProjectId="e8e2c8fd-2db2-4d19-92b1-5c34acccface" ProjectPath="\GeneratedCode" ProjectName="Abaseguros.Finanzas.SIAC3.ServiceImplementation">
+          <Roles>
+            <Role Name="ServiceRole" />
+          </Roles>
+        </ProjectMapping>
+        <ProjectMapping ProjectId="b30dd843-cd78-4013-b1c6-cc9eab0cbd67" ProjectPath="\GeneratedCode" ProjectName="Abaseguros.Finanzas.SIAC3.ServiceContracts">
+          <Roles>
+            <Role Name="ServiceContractRole" />
+          </Roles>
+        </ProjectMapping>
+        <ProjectMapping ProjectId="1e98a0e4-c49f-43cf-9b08-0a2a6f5941a8" ProjectPath="\GeneratedCode" ProjectName="Abaseguros.Finanzas.SIAC.Host">
+          <Roles>
+            <Role Name="HostRole" />
+          </Roles>
+        </ProjectMapping>
+        <ProjectMapping ProjectId="51d06dfe-8fed-4211-89d8-d4f5d4a92ae7" ProjectPath="\GeneratedCode" ProjectName="Abaseguros.Finanzas.SIAC3.Client">
+          <Roles>
+            <Role Name="ClientRole" />
+          </Roles>
+        </ProjectMapping>
+      </ProjectMappings>
+    </ProjectMappingTable>
+  </ProjectMappingTables>
+</ProjectMappingInformation>
