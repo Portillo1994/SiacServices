@@ -21,7 +21,7 @@ namespace Abaseguros.Finanzas.SIAC.BusinessLogic
             return _objValidacionSiacDA.ObtieneBitacoraCargaReporte(businessUnit, tipoArchivo, tipoValidacion, fecha, usuario);
         }
 
-        public List<BusinessEntities.GetJournalValidation> GetJournalValidation(string xmlJournal)
+        public List<BusinessEntities.AccountingInformation> GetJournalValidation(string xmlJournal)
         {
             return _objValidacionSiacDA.GetJournalValidation(xmlJournal);
         }

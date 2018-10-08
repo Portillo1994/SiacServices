@@ -56,14 +56,14 @@ namespace Abaseguros.Finanzas.SIAC.ServiceImplementation
             Abaseguros.Finanzas.SIAC.MessageContracts.GetJournalValidationRequest request)
         {
             MessageContracts.GetJournalValidationResponse objGetJournalValidationResponse = new MessageContracts.GetJournalValidationResponse();
-            List<BusinessEntities.GetJournalValidation> lstGetJournalValidations = null;
+            List<BusinessEntities.AccountingInformation> lstGetJournalValidations = null;
 
             DataContracts.GetJournalValidationCollectionDC lstGetJournalValidationDc = new DataContracts.GetJournalValidationCollectionDC();
             DataContracts.GetJournalValidationDC objGetJournalValidationDc = null;
 
-            lstGetJournalValidations = _objValidacionSiacBL.GetJournalValidation(request.XmlJournal);
+            //lstGetJournalValidations = _objValidacionSiacBL.GetJournalValidation(request.XmlJournal);
 
-            foreach (BusinessEntities.GetJournalValidation objGetJournalValidation in lstGetJournalValidations)
+            foreach (BusinessEntities.AccountingInformation objGetJournalValidation in lstGetJournalValidations)
             {
                 objGetJournalValidationDc = new DataContracts.GetJournalValidationDC();
                 //objGetJournalValidationDc.XmlJournal = objGetJournalValidation.XmlJournal;

@@ -27,7 +27,7 @@ namespace Abaseguros.Finanzas.SIAC.ServiceContracts
         [WCF::OperationContract(IsTerminating = false, IsInitiating = true, IsOneWay = false, AsyncPattern = false, Action = "ObtieneBitacoraCargaReporte", ProtectionLevel = ProtectionLevel.None)]
         Abaseguros.Finanzas.SIAC.MessageContracts.ObtieneBitacoraResponse ObtieneBitacoraCargaReporte(Abaseguros.Finanzas.SIAC.MessageContracts.ObtieneBitacoraReporteRequest request);
 
-        [WCF::OperationContract(IsTerminating = false, IsInitiating = true, IsOneWay = false, AsyncPattern = false, Action = "GetJournalValidation", ProtectionLevel = ProtectionLevel.None)]
+        [WCF::OperationContract(IsTerminating = false, IsInitiating = true, IsOneWay = false, AsyncPattern = false, Action = "AccountingInformation", ProtectionLevel = ProtectionLevel.None)]
         Abaseguros.Finanzas.SIAC.MessageContracts.GetJournalValidationResponse GetJournalValidation(
             Abaseguros.Finanzas.SIAC.MessageContracts.GetJournalValidationRequest request);
 

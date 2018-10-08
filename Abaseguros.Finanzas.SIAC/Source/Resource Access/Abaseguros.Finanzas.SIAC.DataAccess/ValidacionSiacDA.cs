@@ -9,18 +9,18 @@ namespace Abaseguros.Finanzas.SIAC.DataAccess
     {
         SIACModeloDataContext _dbContext = new SIACModeloDataContext();
 
-        public List<BusinessEntities.GetJournalValidation> GetJournalValidation(string xmlJournal)
+        public List<BusinessEntities.AccountingInformation> GetJournalValidation(string xmlJournal)
         {
-            List<BusinessEntities.GetJournalValidation> lstObtieneBitacora = new List<BusinessEntities.GetJournalValidation>();
-            BusinessEntities.GetJournalValidation objGetJournalValidation = null;
+            List<BusinessEntities.AccountingInformation> lstObtieneBitacora = new List<BusinessEntities.AccountingInformation>();
+            BusinessEntities.AccountingInformation objAccountingInformation = null;
 
             var vResult = _dbContext.spGetSIACValidation(xmlJournal);
 
             foreach (var item in vResult)
             {
-                objGetJournalValidation = new BusinessEntities.GetJournalValidation();
-                objGetJournalValidation.XmlJournal = item.ResultXml;
-                lstObtieneBitacora.Add(objGetJournalValidation);
+                objAccountingInformation = new BusinessEntities.AccountingInformation();
+                objAccountingInformation.XmlJournal = item.ResultXml;
+                lstObtieneBitacora.Add(objAccountingInformation);
             }
 
             return lstObtieneBitacora;
