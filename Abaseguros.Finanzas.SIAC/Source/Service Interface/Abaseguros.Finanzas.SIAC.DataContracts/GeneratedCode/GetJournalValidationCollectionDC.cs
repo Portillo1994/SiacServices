@@ -1,4 +1,4 @@
-﻿using Abaseguros.Finanzas.SIAC.DataContracts.GeneratedCode;
+﻿using Abaseguros.Finanzas.SIAC.DataContracts;
 using WcfSerialization = global::System.Runtime.Serialization;
 
 namespace Abaseguros.Finanzas.SIAC.DataContracts

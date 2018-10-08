@@ -5,7 +5,7 @@ using System.Text;
 
 using WcfSerialization = global::System.Runtime.Serialization;
 
-namespace Abaseguros.Finanzas.SIAC.DataContracts.GeneratedCode
+namespace Abaseguros.Finanzas.SIAC.DataContracts
 {
     [WcfSerialization::DataContract(Namespace = "http://abaseguros.com", Name = "ErrorDC")]
     public class ErrorDC

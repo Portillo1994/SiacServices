@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Abaseguros.Finanzas.SIAC.BusinessEntities;
 
 namespace Abaseguros.Finanzas.SIAC.BusinessLogic
 {
@@ -21,7 +22,7 @@ namespace Abaseguros.Finanzas.SIAC.BusinessLogic
             return _objValidacionSiacDA.ObtieneBitacoraCargaReporte(businessUnit, tipoArchivo, tipoValidacion, fecha, usuario);
         }
 
-        public List<BusinessEntities.AccountingInformation> GetJournalValidation(string xmlJournal)
+        public List<BusinessEntities.ErrorObj> GetJournalValidation(AccountingInformation xmlJournal)
         {
             return _objValidacionSiacDA.GetJournalValidation(xmlJournal);
         }

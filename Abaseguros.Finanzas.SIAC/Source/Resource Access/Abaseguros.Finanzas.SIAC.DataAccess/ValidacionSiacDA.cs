@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Xml.Serialization;
 using Abaseguros.Finanzas.SIAC.BusinessEntities;
 
 namespace Abaseguros.Finanzas.SIAC.DataAccess
@@ -9,21 +11,33 @@ namespace Abaseguros.Finanzas.SIAC.DataAccess
     {
         SIACModeloDataContext _dbContext = new SIACModeloDataContext();
 
-        public List<BusinessEntities.AccountingInformation> GetJournalValidation(string xmlJournal)
-        {
-            List<BusinessEntities.AccountingInformation> lstObtieneBitacora = new List<BusinessEntities.AccountingInformation>();
-            BusinessEntities.AccountingInformation objAccountingInformation = null;
+        public List<BusinessEntities.ErrorObj> GetJournalValidation(AccountingInformation xmlJournal)
+       {
+            AccountingInformation accounting = xmlJournal;
 
-            var vResult = _dbContext.spGetSIACValidation(xmlJournal);
+            List<BusinessEntities.ErrorObj> lstErrorObjs = new List<BusinessEntities.ErrorObj>();
+            BusinessEntities.ErrorObj objAccountingInformation = null;
 
-            foreach (var item in vResult)
+           var stringWriter = new StringWriter();
+           var serializer = new XmlSerializer(accounting.GetType());
+           serializer.Serialize(stringWriter, accounting);
+
+            var vResult = _dbContext.spGetSIACValidation(stringWriter.ToString());
+
+
+            foreach (var item in vResult.ToList())
             {
-                objAccountingInformation = new BusinessEntities.AccountingInformation();
-                objAccountingInformation.XmlJournal = item.ResultXml;
-                lstObtieneBitacora.Add(objAccountingInformation);
+                objAccountingInformation = new BusinessEntities.ErrorObj
+                {
+                    ProcessId = item.ProcessId,
+                    ErrorDescription = item.ErrorDescription,
+                    ValidationId = item.ValidationId,
+                    RecordId = item.RecordId
+                };
+                lstErrorObjs.Add(objAccountingInformation);
             }
 
-            return lstObtieneBitacora;
+            return lstErrorObjs;
 
         }
         public List<BusinessEntities.ObtieneBitacora> ObtieneBitacora(int idTipoValidacion, int businessUnit, int idSistema, int idPlaza, DateTime fechaValidacion)
@@ -99,5 +113,6 @@ namespace Abaseguros.Finanzas.SIAC.DataAccess
 
             return valor;
         }
+
     }
 }

@@ -8,72 +8,127 @@
 //------------------------------------------------------------------------------
 
 using System.Collections.Generic;
-using Abaseguros.Finanzas.SIAC.DataContracts;
-using Abaseguros.Finanzas.SIAC.MessageContracts;
+using Abaseguros.Finanzas.SIAC.BusinessEntities;
 using WCF = global::System.ServiceModel;
 
 namespace Abaseguros.Finanzas.SIAC.ServiceImplementation
-{	
-	/// <summary>
-	/// Service Class - ValidacionesSiacService
-	/// </summary>
-	[WCF::ServiceBehavior(Name = "ValidacionesSiacService", 
-		Namespace = "http://abaseguros.com", 
-		InstanceContextMode = WCF::InstanceContextMode.PerSession, 
-		ConcurrencyMode = WCF::ConcurrencyMode.Single )]
-	public abstract class ValidacionesSiacServiceBase : Abaseguros.Finanzas.SIAC.ServiceContracts.IValidacionesSiacServiceContract
-	{
-		#region ValidacionesSiacServiceContract Members
+{
+    /// <summary>
+    /// Service Class - ValidacionesSiacService
+    /// </summary>
+    [WCF::ServiceBehavior(Name = "ValidacionesSiacService",
+        Namespace = "http://abaseguros.com",
+        InstanceContextMode = WCF::InstanceContextMode.PerSession,
+        ConcurrencyMode = WCF::ConcurrencyMode.Single)]
+    public abstract class ValidacionesSiacServiceBase : Abaseguros.Finanzas.SIAC.ServiceContracts.IValidacionesSiacServiceContract
+    {
+        #region ValidacionesSiacServiceContract Members
 
-		public virtual Abaseguros.Finanzas.SIAC.MessageContracts.ObtieneBitacoraResponse ObtieneBitacora(Abaseguros.Finanzas.SIAC.MessageContracts.ObtieneBitacoraRequest request)
-		{
-			return null;
-		}
+        public virtual Abaseguros.Finanzas.SIAC.MessageContracts.ObtieneBitacoraResponse ObtieneBitacora(Abaseguros.Finanzas.SIAC.MessageContracts.ObtieneBitacoraRequest request)
+        {
+            return null;
+        }
 
-		public virtual Abaseguros.Finanzas.SIAC.MessageContracts.ObtieneBitacoraHistorialResponse ObtieneBitacoraHistorial(Abaseguros.Finanzas.SIAC.MessageContracts.ObtieneBitacoraRequest request)
-		{
-			return null;
-		}
+        public virtual Abaseguros.Finanzas.SIAC.MessageContracts.ObtieneBitacoraHistorialResponse ObtieneBitacoraHistorial(Abaseguros.Finanzas.SIAC.MessageContracts.ObtieneBitacoraRequest request)
+        {
+            return null;
+        }
 
         public virtual Abaseguros.Finanzas.SIAC.MessageContracts.ObtieneBitacoraResponse ObtieneBitacoraCargaReporte(Abaseguros.Finanzas.SIAC.MessageContracts.ObtieneBitacoraReporteRequest request)
         {
             return null;
         }
 
-	    public virtual Abaseguros.Finanzas.SIAC.MessageContracts.GetJournalValidationResponse GetJournalValidation(Abaseguros.Finanzas.SIAC.MessageContracts.GetJournalValidationRequest request)
-	    {
-	        return null;
-	    }
+        public virtual Abaseguros.Finanzas.SIAC.MessageContracts.GetJournalValidationResponse GetJournalValidation(Abaseguros.Finanzas.SIAC.MessageContracts.GetJournalValidationRequest request)
+        {
+            return null;
+        }
 
-	    #endregion
-	}
+        #endregion
+    }
 
     public partial class ValidacionesSiacService : ValidacionesSiacServiceBase
     {
         BusinessLogic.ValidacionSiacBL _objValidacionSiacBL = new BusinessLogic.ValidacionSiacBL();
 
-        public  override Abaseguros.Finanzas.SIAC.MessageContracts.GetJournalValidationResponse GetJournalValidation(
+        public override Abaseguros.Finanzas.SIAC.MessageContracts.GetJournalValidationResponse GetJournalValidation(
             Abaseguros.Finanzas.SIAC.MessageContracts.GetJournalValidationRequest request)
         {
             MessageContracts.GetJournalValidationResponse objGetJournalValidationResponse = new MessageContracts.GetJournalValidationResponse();
-            List<BusinessEntities.AccountingInformation> lstGetJournalValidations = null;
+            List<BusinessEntities.ErrorObj> lstErrorObjs = null;
+            DataContracts.GetJournalValidationCollectionDC lstGetJournalValidationCollectionDc = new DataContracts.GetJournalValidationCollectionDC();
+            DataContracts.ErrorDC objErrorDc = null;
 
-            DataContracts.GetJournalValidationCollectionDC lstGetJournalValidationDc = new DataContracts.GetJournalValidationCollectionDC();
-            DataContracts.GetJournalValidationDC objGetJournalValidationDc = null;
-
-            //lstGetJournalValidations = _objValidacionSiacBL.GetJournalValidation(request.XmlJournal);
-
-            foreach (BusinessEntities.AccountingInformation objGetJournalValidation in lstGetJournalValidations)
+            var objHeader = new Header()
             {
-                objGetJournalValidationDc = new DataContracts.GetJournalValidationDC();
-                //objGetJournalValidationDc.XmlJournal = objGetJournalValidation.XmlJournal;
+                AccountingDate = request.AccountingInformation.Header.AccountingDate,
+                Branch = request.AccountingInformation.Header.Branch,
+                BusinessUnit = request.AccountingInformation.Header.BusinessUnit,
+                RegisterCount = request.AccountingInformation.Header.RegisterCount,
+                RecordType = request.AccountingInformation.Header.RecordType,
+                SourceSystemId = request.AccountingInformation.Header.SourceSystemId
+            };
 
-                lstGetJournalValidationDc.Add(objGetJournalValidationDc);
+            var lstObjDetails = new List<Detail>();
+
+            foreach (var detail in request.AccountingInformation.AccountingDetail)
+            {
+                var addDetail = new Detail()
+                {
+                    Affiliate = detail.Affiliate,
+                    DepId = detail.DepId,
+                    DistributionChannel = detail.DistributionChannel,
+                    Function = detail.Function,
+                    JrnlLnRef = detail.JrnlLnRef,
+                    Ledger = detail.Ledger,
+                    LineDescription = detail.LineDescription,
+                    Location = detail.Location,
+                    Mcc = detail.Mcc,
+                    MonetaryAmount = detail.MonetaryAmount,
+                    OperatingUnit = detail.OperatingUnit,
+                    OriginalAmount = detail.OriginalAmount,
+                    OriginalCurrency = detail.OriginalCurrency,
+                    PoliceYear = detail.PoliceYear,
+                    Product = detail.Product,
+                    ProjectId = detail.ProjectId,
+                    RegisterId = detail.RegisterId,
+                    TransactionCode = detail.TransactionCode,
+                    Year = detail.Year,
+
+                    AltAccount = detail.AltAccount,
+                    PsAccount = detail.PsAccount
+                    
+                };
+
+                lstObjDetails.Add(addDetail);
+            }
+            
+            
+           
+            var objAccountingInformation = new AccountingInformation()
+            {
+                Detail = lstObjDetails,
+                Header = objHeader
+            };
+
+
+            lstErrorObjs = _objValidacionSiacBL.GetJournalValidation(objAccountingInformation);
+
+            foreach (BusinessEntities.ErrorObj objError in lstErrorObjs)
+            {
+                objErrorDc = new DataContracts.ErrorDC();
+                objErrorDc.ProcessId = objError.ProcessId;
+                objErrorDc.ValidationId = objError.ValidationId;
+                objErrorDc.ErrorDescription = objError.ErrorDescription;
+                objErrorDc.RecordId = objError.RecordId;
+
+                lstGetJournalValidationCollectionDc.Add(objErrorDc);
             }
 
-            objGetJournalValidationResponse.GetJournalValidation = lstGetJournalValidationDc;
+            objGetJournalValidationResponse.GetJournalValidation = lstGetJournalValidationCollectionDc;
 
             return objGetJournalValidationResponse;
+
         }
         public override Abaseguros.Finanzas.SIAC.MessageContracts.ObtieneBitacoraResponse ObtieneBitacora(Abaseguros.Finanzas.SIAC.MessageContracts.ObtieneBitacoraRequest request)
         {
@@ -168,6 +223,6 @@ namespace Abaseguros.Finanzas.SIAC.ServiceImplementation
             return objObtieneBitacoraResponse;
         }
     }
-	
+
 }
 

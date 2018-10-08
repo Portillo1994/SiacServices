@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Core">
@@ -58,6 +59,7 @@
   <ItemGroup>
     <Compile Include="GeneratedCode\ActualizaPrevalidacionParametros.cs" />
     <Compile Include="GeneratedCode\ActualizaPrevalidacionParametrosCollection.cs" />
+    <Compile Include="GeneratedCode\ErrorDC.cs" />
     <Compile Include="GeneratedCode\GetJournalValidationCollectionDC.cs" />
     <Compile Include="GeneratedCode\GetJournalValidationDC.cs" />
     <Compile Include="GeneratedCode\MonedaCollectionDC.cs" />
