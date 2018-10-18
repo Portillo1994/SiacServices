@@ -24,7 +24,7 @@ namespace Abaseguros.Finanzas.SIAC.BusinessLogic
 
         public List<BusinessEntities.ErrorObj> GetJournalValidation(AccountingInformation xmlJournal)
         {
-            return _objValidacionSiacDA.GetJournalValidation(xmlJournal);
+            return _objValidacionSiacDA.GetVocuherValidation(xmlJournal);
         }
 
         public string ObtieneConfiguracionXSistema(int businessUnit, int sistemaid, int plazaid, string configuracion)

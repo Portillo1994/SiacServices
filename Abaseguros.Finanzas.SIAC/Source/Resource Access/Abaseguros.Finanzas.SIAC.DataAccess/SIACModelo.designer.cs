@@ -60,9 +60,9 @@ namespace Abaseguros.Finanzas.SIAC.DataAccess
 
 
         [global::System.Data.Linq.Mapping.FunctionAttribute(Name = "SiacPS.spGetSIACValidation")]
-        public ISingleResult<spGetSIACValidation> spGetSIACValidation([global::System.Data.Linq.Mapping.ParameterAttribute(Name = "xmlJournal", DbType = "NVARCHAR(MAX)")] string xmlJournal)
+        public ISingleResult<spGetSIACValidation> spGetSIACValidation([global::System.Data.Linq.Mapping.ParameterAttribute(Name = "voucherInformation", DbType = "XML")] string voucherInformation)
         {
-            IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), xmlJournal);
+            IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), voucherInformation);
 
             return ((ISingleResult<spGetSIACValidation>)result.ReturnValue);
         }

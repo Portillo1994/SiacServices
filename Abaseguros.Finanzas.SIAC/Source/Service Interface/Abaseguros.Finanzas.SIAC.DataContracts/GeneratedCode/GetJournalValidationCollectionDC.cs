@@ -4,10 +4,10 @@ using WcfSerialization = global::System.Runtime.Serialization;
 namespace Abaseguros.Finanzas.SIAC.DataContracts
 {
     /// <summary>
-    /// Data Contract Class - GetJournalValidationCollectionDC
+    /// Data Contract Class - ErrorCollectionDC
     /// </summary>
     [WcfSerialization::CollectionDataContract(Namespace = "http://abaseguros.com")]
-    public partial class GetJournalValidationCollectionDC : System.Collections.Generic.List<ErrorDC>
+    public partial class ErrorCollectionDC : System.Collections.Generic.List<ErrorDC>
     {
 
     }

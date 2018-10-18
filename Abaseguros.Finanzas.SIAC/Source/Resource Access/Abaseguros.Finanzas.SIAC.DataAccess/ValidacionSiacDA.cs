@@ -11,7 +11,7 @@ namespace Abaseguros.Finanzas.SIAC.DataAccess
     {
         SIACModeloDataContext _dbContext = new SIACModeloDataContext();
 
-        public List<BusinessEntities.ErrorObj> GetJournalValidation(AccountingInformation xmlJournal)
+        public List<BusinessEntities.ErrorObj> GetVocuherValidation(AccountingInformation xmlJournal)
        {
             AccountingInformation accounting = xmlJournal;
 

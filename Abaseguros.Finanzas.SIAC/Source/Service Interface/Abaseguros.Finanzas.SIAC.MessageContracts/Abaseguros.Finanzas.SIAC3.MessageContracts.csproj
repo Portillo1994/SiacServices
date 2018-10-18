@@ -67,8 +67,8 @@
     <Compile Include="GeneratedCode\ActualizaResultadosPrevalidacionRequest.cs" />
     <Compile Include="GeneratedCode\ActualizaResultadosPrevalidacionResponse.cs" />
     <Compile Include="GeneratedCode\FechasAcumuladoSiniestros.cs" />
-    <Compile Include="GeneratedCode\GetJournalValidationRequest.cs" />
-    <Compile Include="GeneratedCode\GetJournalValidationResponse.cs" />
+    <Compile Include="GeneratedCode\VoucherInformationRequest.cs" />
+    <Compile Include="GeneratedCode\VoucherInformationResponse.cs" />
     <Compile Include="GeneratedCode\ObtieneMonedasResponse.cs" />
     <Compile Include="GeneratedCode\HistorialRORequest.cs" />
     <Compile Include="GeneratedCode\HistorialROResponse.cs" />

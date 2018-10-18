@@ -39,7 +39,7 @@ namespace Abaseguros.Finanzas.SIAC.ServiceImplementation
             return null;
         }
 
-        public virtual Abaseguros.Finanzas.SIAC.MessageContracts.GetJournalValidationResponse GetJournalValidation(Abaseguros.Finanzas.SIAC.MessageContracts.GetJournalValidationRequest request)
+        public virtual Abaseguros.Finanzas.SIAC.MessageContracts.VoucherInformationResponse GetVoucherValidation(Abaseguros.Finanzas.SIAC.MessageContracts.VoucherInformationRequest request)
         {
             return null;
         }
@@ -51,12 +51,12 @@ namespace Abaseguros.Finanzas.SIAC.ServiceImplementation
     {
         BusinessLogic.ValidacionSiacBL _objValidacionSiacBL = new BusinessLogic.ValidacionSiacBL();
 
-        public override Abaseguros.Finanzas.SIAC.MessageContracts.GetJournalValidationResponse GetJournalValidation(
-            Abaseguros.Finanzas.SIAC.MessageContracts.GetJournalValidationRequest request)
+        public override Abaseguros.Finanzas.SIAC.MessageContracts.VoucherInformationResponse GetVoucherValidation(
+            Abaseguros.Finanzas.SIAC.MessageContracts.VoucherInformationRequest request)
         {
-            MessageContracts.GetJournalValidationResponse objGetJournalValidationResponse = new MessageContracts.GetJournalValidationResponse();
+            MessageContracts.VoucherInformationResponse objVoucherInformationResponse = new MessageContracts.VoucherInformationResponse();
             List<BusinessEntities.ErrorObj> lstErrorObjs = null;
-            DataContracts.GetJournalValidationCollectionDC lstGetJournalValidationCollectionDc = new DataContracts.GetJournalValidationCollectionDC();
+            DataContracts.ErrorCollectionDC lstErrorCollectionDc = new DataContracts.ErrorCollectionDC();
             DataContracts.ErrorDC objErrorDc = null;
 
             var objHeader = new Header()
@@ -122,12 +122,12 @@ namespace Abaseguros.Finanzas.SIAC.ServiceImplementation
                 objErrorDc.ErrorDescription = objError.ErrorDescription;
                 objErrorDc.RecordId = objError.RecordId;
 
-                lstGetJournalValidationCollectionDc.Add(objErrorDc);
+                lstErrorCollectionDc.Add(objErrorDc);
             }
 
-            objGetJournalValidationResponse.GetJournalValidation = lstGetJournalValidationCollectionDc;
+            objVoucherInformationResponse.Error = lstErrorCollectionDc;
 
-            return objGetJournalValidationResponse;
+            return objVoucherInformationResponse;
 
         }
         public override Abaseguros.Finanzas.SIAC.MessageContracts.ObtieneBitacoraResponse ObtieneBitacora(Abaseguros.Finanzas.SIAC.MessageContracts.ObtieneBitacoraRequest request)

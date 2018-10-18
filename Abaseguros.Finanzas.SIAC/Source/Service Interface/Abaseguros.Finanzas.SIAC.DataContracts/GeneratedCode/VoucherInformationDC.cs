@@ -5,8 +5,8 @@ using WcfSerialization = global::System.Runtime.Serialization;
 
 namespace Abaseguros.Finanzas.SIAC.DataContracts
 {
-    [WcfSerialization::DataContract(Namespace = "http://abaseguros.com", Name = "GetJournalValidationDC")]
-    public partial class GetJournalValidationDC
+    [WcfSerialization::DataContract(Namespace = "http://abaseguros.com", Name = "VoucherInformationDC")]
+    public partial class VoucherInformationDC
     {
         /// <summary>
         /// Header of the Accounting Data.

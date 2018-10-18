@@ -61,7 +61,7 @@
     <Compile Include="GeneratedCode\ActualizaPrevalidacionParametrosCollection.cs" />
     <Compile Include="GeneratedCode\ErrorDC.cs" />
     <Compile Include="GeneratedCode\GetJournalValidationCollectionDC.cs" />
-    <Compile Include="GeneratedCode\GetJournalValidationDC.cs" />
+    <Compile Include="GeneratedCode\VoucherInformationDC.cs" />
     <Compile Include="GeneratedCode\MonedaCollectionDC.cs" />
     <Compile Include="GeneratedCode\MonedaDC.cs" />
     <Compile Include="GeneratedCode\DiasMesDC.cs" />
