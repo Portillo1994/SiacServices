@@ -11,11 +11,11 @@ namespace Abaseguros.Finanzas.SIAC.DataAccess
     {
         SIACModeloDataContext _dbContext = new SIACModeloDataContext();
 
-        public List<BusinessEntities.ErrorObj> GetVocuherValidation(AccountingInformation xmlJournal)
+        public List<BusinessEntities.ErrorObj> GetVoucherValidation(AccountingInformation xmlJournal)
        {
-            AccountingInformation accounting = xmlJournal;
+            var accounting = xmlJournal;
 
-            List<BusinessEntities.ErrorObj> lstErrorObjs = new List<BusinessEntities.ErrorObj>();
+            var lstErrorObjs = new List<BusinessEntities.ErrorObj>();
             BusinessEntities.ErrorObj objAccountingInformation = null;
 
            var stringWriter = new StringWriter();
